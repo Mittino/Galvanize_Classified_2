@@ -2,20 +2,27 @@
 <html ng-app="myApp">
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <title>Galvanize Classified</title>
     <script src="/angular/angular.min.js"></script>
     <script
    src="https://code.jquery.com/jquery-3.1.1.min.js"
    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
    crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
     <script src="module.js"></script>
+    <script src="app.config.js"></script>
     <script src="application/application.component.js"></script>
     <script src="services/ads.js"></script>
+    <script src="adsRoute/adsRoute.component.js"></script>
+    <script src="ad/ad.component.js"></script>
   </head>
   <body>
     Galvanize Classified
-
-    <application></application>
+    <ui-view></ui-view>
+    <!-- <application></application> -->
+    <!-- <ads-route></ads-route>
+    <ad></ad> -->
 
   </body>
 
