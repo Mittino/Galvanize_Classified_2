@@ -3,7 +3,7 @@
   angular.module("myApp")
     .component("adsRoute", {
       controller:AdsRouteController,
-      templateUrl:"adsRoute.html"
+      templateUrl:"./adsRoute/adsRoute.html"
     });
 
     function AdsRouteController(adService){
