@@ -3,7 +3,7 @@ angular.module("myApp")
     var service=this;
 
     service.getPosts = function(){
-      return $http.get('/classifieds')
+      return $http.get('/classifieds');
     };
 
     console.log(getPosts());

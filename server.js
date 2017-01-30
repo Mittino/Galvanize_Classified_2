@@ -13,13 +13,13 @@ app.use(bodyParser.json());
 app.use('/classifieds', messages);
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '/../', 'node_modules')));
+//app.use(express.static(path.join(__dirname, '/../', 'node_modules')));
 
 app.use('/angular', express.static('./node_modules/angular'));
 
 
 app.use('*', function(req, res, next) {
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')})
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
 const port = process.env.PORT || 3000;
