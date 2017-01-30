@@ -3,7 +3,10 @@
   angular.module("myApp")
     .component("newAd",{
       controller: newAdController,
-      templateUrl:"./newAd/new-ad.html"
+      templateUrl:"./newAd/new-ad.html",
+      bindings:{
+        onCreateAd: '&'
+      }
     });
 
     function newAdController(){
@@ -11,7 +14,9 @@
 
       vm.createNewAd = function(){
         console.log("submitted new ad");
-      }
+        console.log(vm.newAd);
+        vm.onCreateAd({ad:vm.newAd});
+      };
 
 
     }

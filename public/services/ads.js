@@ -5,6 +5,9 @@ angular.module("myApp")
     service.getAds = function(){
       return $http.get('/classifieds/');
     };
+    service.postAd = function(ad){
+      return $http.post('/classifieds/', ad)
+    };
 
 
   });

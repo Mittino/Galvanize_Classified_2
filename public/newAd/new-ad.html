@@ -1,14 +1,14 @@
 <div>
   <form name="newAdForm" ng-submit="$ctrl.createNewAd()">
     <label> Title: </label>
-    <input type="text" required></input>
+    <input type="text" ng-model="$ctrl.newAd.title" required></input>
     <label> Description: </label>
-    <input type="text" required></input>
+    <input type="text" ng-model="$ctrl.newAd.description" required></input>
     <br></br>
     <label> Price: </label>
-    <input type="number" required></input>
+    <input type="number" ng-model="$ctrl.newAd.price" required></input>
     <label> Image: </label>
-    <input type="text" required></input>
+    <input type="text" ng-model="$ctrl.newAd.item_image" required></input>
     <br></br>
     <button type="submit">SUBMIT</button>
   </form>

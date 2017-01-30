@@ -1,3 +1,5 @@
 <div> Ads Route</div>
 
 <ad ad="ad" ng-repeat="ad in $ctrl.ads"></ad>
+
+<new-ad on-create-ad="$ctrl.newAdd(ad)"></new-ad>
