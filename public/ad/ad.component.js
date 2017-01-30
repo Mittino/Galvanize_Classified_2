@@ -5,13 +5,13 @@
       controller:adController,
       templateUrl:"ad/ad.html",
       bindings: {
-      ad: '<'
+        ad: '<'
       }
     });
 
     function adController(){
       var vm = this;
-
+    
     }
 
 
