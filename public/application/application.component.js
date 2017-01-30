@@ -8,10 +8,19 @@
 
     });
 
-    function ApplicationController(){
-      var vm=this;
-      console.log('the app controller');
-    }
+    function ApplicationController(adService){
+      var vm = this;
 
+      vm.$onInit = function getAdData(){
+        adService.getAds()
+        .then(function(response){
+          console.log(response);
+        }) .catch(function(){
+          console.log('error getting ads');
+        });
+      };
+
+
+    }
 
 })();
