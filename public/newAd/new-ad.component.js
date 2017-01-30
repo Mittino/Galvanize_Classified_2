@@ -8,6 +8,12 @@
 
     function newAdController(){
       var vm=this;
+
+      vm.createNewAd = function(){
+        console.log("submitted new ad");
+      }
+
+
     }
 
 })();
