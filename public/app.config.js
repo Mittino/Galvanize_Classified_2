@@ -17,7 +17,12 @@
       url:'/ads',
       component:'adsRoute',
       parent:'application'
-  });
+    }).state({
+      name:'newAd',
+      url:'/new',
+      component:'newAd',
+      parent:'application'
+    });
 
   }
 })();
