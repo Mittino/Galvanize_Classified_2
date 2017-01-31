@@ -9,6 +9,9 @@ angular.module("myApp")
       return $http.post('/classifieds/', ad)
     };
 
+    service.editAd = function(id, ad){
+      return $http.patch('/classifieds/' + id, ad);
+    }
 
   });
-  //https://gclassifieds.herokuapp.com/classifieds/
+  

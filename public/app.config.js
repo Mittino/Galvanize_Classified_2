@@ -18,9 +18,9 @@
       component:'adsRoute',
       parent:'application'
     }).state({
-      name:'newAd',
-      url:'/new',
-      component:'newAd',
+      name:'editAdsRoute',
+      url:'/ads/:id/edit',
+      component:'editAdsRoute',
       parent:'application'
     });
 

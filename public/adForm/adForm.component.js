@@ -1,15 +1,15 @@
 (function(){
 
   angular.module("myApp")
-    .component("newAd",{
-      controller: newAdController,
-      templateUrl:"./newAd/new-ad.html",
+    .component("adForm",{
+      controller: adFormController,
+      templateUrl:"./adForm/adForm.html",
       bindings:{
         onCreateAd: '&'
       }
     });
 
-    function newAdController(){
+    function adFormController(){
       var vm=this;
 
       vm.createNewAd = function(){

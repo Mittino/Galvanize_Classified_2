@@ -1,6 +1,7 @@
 <!-- <div> ad </div> -->
 <div>Title: {{$ctrl.ad.title}}</div>
 <div>Description: {{$ctrl.ad.description}}<div>
-<div>Price: {{$ctrl.ad.price}} {{$ctrl.ad.item_image}}</div>
+<div>Price: {{$ctrl.ad.price}}</div>
 <img src="{{$ctrl.ad.item_image}}">
+<button ui-sref="editAdsRoute({id: $ctrl.ad.id})"> Edit </button>
 </br>
