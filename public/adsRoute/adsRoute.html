@@ -1,7 +1,8 @@
-<div> Ads Route</div>
+<label> Search: <input type="search" placeholder="filter" ng-model="searchText"></label>
 
+<br></br>
 <button ng-click="$ctrl.showAdForm()"> New Ad </button>
 
 <ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
 
-<ad ad="ad" ng-repeat="ad in $ctrl.ads" on-delete="$ctrl.deleteAd(id)"></ad>
+<ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText" on-delete="$ctrl.deleteAd(id)"></ad>
