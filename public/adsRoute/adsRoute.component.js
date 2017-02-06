@@ -34,8 +34,17 @@
       }
 
       vm.showAdForm = function(){
-        console.log('clicked');
         vm.adForm = !vm.adForm;
+      };
+
+      vm.deleteAd = function(id){
+        adService.deleteAd(id)
+        .then(function(response){
+          var index = _.findIndex(vm.ads, {id:id});
+          vm.ads.splice(index, 1);
+        }).catch(function(response){
+          console.log('error deliting ad', response);
+        });
       };
 
     }

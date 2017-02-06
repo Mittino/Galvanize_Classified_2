@@ -5,8 +5,9 @@ angular.module("myApp")
     service.getAds = function(){
       return $http.get('/classifieds/');
     };
+
     service.postAd = function(ad){
-      return $http.post('/classifieds/', ad)
+      return $http.post('/classifieds/', ad);
     };
 
     service.editAd = function(id, ad){
@@ -15,6 +16,10 @@ angular.module("myApp")
 
     service.getAd = function(id){
       return $http.get('/classifieds/' + id);
-    }
+    };
 
+    service.deleteAd = function(id){
+      return $http.delete('/classifieds/' + id);
+    };
+    
   });

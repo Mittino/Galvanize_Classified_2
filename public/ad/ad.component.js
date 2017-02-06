@@ -6,7 +6,7 @@
       templateUrl:"ad/ad.html",
       bindings: {
         ad: '<',
-
+        onDelete: '&'
       }
     });
 
@@ -14,7 +14,14 @@
       var vm = this;
 
 
+      vm.deleteAdd = function(){
+        console.log('delete click');
+        console.log(this.ad.id);
+        vm.onDelete({id:this.ad.id});
+      };
+
     }
+
 
 
 })();

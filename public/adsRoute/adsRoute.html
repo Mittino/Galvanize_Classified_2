@@ -4,4 +4,4 @@
 
 <ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
 
-<ad ad="ad" ng-repeat="ad in $ctrl.ads"></ad>
+<ad ad="ad" ng-repeat="ad in $ctrl.ads" on-delete="$ctrl.deleteAd(id)"></ad>
