@@ -5,18 +5,22 @@
       controller: adFormController,
       templateUrl:"./adForm/adForm.html",
       bindings:{
-        onCreateAd: '&'
+        onChange: '&',
+        ad: '<'
       }
     });
 
     function adFormController(){
       var vm=this;
 
-      vm.createNewAd = function(){
-        console.log("submitted new ad");
-        console.log(vm.newAd);
-        vm.onCreateAd({ad:vm.newAd});
+      vm.$onChanges = function(changesObj){
+        console.log(changesObj);
+        if (changesObj.ad){
+          vm.formData = angular.copy(changesObj.ad.currentValue || {});
+        }
+
       };
+
 
 
     }

@@ -1,5 +1,7 @@
 <div> Ads Route</div>
 
-<ad-form on-create-ad="$ctrl.newAdd(ad)"></ad-form>
+<button ng-click="$ctrl.showAdForm()"> New Ad </button>
+
+<ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
 
 <ad ad="ad" ng-repeat="ad in $ctrl.ads"></ad>

@@ -11,7 +11,10 @@ angular.module("myApp")
 
     service.editAd = function(id, ad){
       return $http.patch('/classifieds/' + id, ad);
+    };
+
+    service.getAd = function(id){
+      return $http.get('/classifieds/' + id);
     }
 
   });
-  

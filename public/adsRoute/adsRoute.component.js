@@ -8,6 +8,7 @@
 
     function AdsRouteController(adService){
       var vm = this;
+      vm.adForm = false;
 
       vm.$onInit = function getAdData(){
         vm.showNew = false;
@@ -26,20 +27,15 @@
           vm.newAd = response.data
           console.log(response);
           vm.ads.push(response.data);
+          vm.adForm = !vm.adForm;
         }).catch(function(){
           console.log('error posting ad');
         });
       }
 
-      vm.editAdd = function(ad){
-        adService.editAd(ad)
-        .then(function(resposnse){
-          vm.newAd = response.data;
-          console.log(response);
-
-        }).catch(function(){
-          console.log('error updating add');
-        });
+      vm.showAdForm = function(){
+        console.log('clicked');
+        vm.adForm = !vm.adForm;
       };
 
     }
