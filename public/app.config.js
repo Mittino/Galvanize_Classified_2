@@ -4,7 +4,7 @@
   config.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
 
   function config($locationProvider, $urlRouterProvider, $stateProvider){
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/ads');
     $locationProvider.html5Mode(true);
 
     $stateProvider
