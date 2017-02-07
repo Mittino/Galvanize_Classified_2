@@ -29,8 +29,8 @@
           console.log(response);
           vm.ads.push(response.data);
           vm.adForm = !vm.adForm;
-        }).catch(function(){
-          console.log('error posting ad');
+        }).catch(function(response){
+          console.log('error posting ad', response);
         });
       }
 
