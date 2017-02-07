@@ -1,8 +1,18 @@
 <label> Search: <input type="search" placeholder="filter" ng-model="searchText"></label>
+<br></br>
+
+
+<label for="sortBy"> Sort By:</label>
+  <select name="sortBy" class="dropdown-menu" ng-model="$ctrl.sort">
+    <option value="none">None</option>
+    <option value="price">Price</option>
+    <option value="date">Date</option>
+  </select>
 
 <br></br>
 <button ng-click="$ctrl.showAdForm()"> New Ad </button>
 
+
 <ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
 
-<ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText" on-delete="$ctrl.deleteAd(id)"></ad>
+<ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText | orderBy:$ctrl.sort" on-delete="$ctrl.deleteAd(id)"></ad>
