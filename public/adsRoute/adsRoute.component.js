@@ -11,11 +11,6 @@
       vm.adForm = false;
       vm.sort = '';
 
-      // vm.sortBy = function(input){
-      //   vm.sort = value;
-      //   console.log(input, 'sort');
-      // };
-
       vm.$onInit = function getAdData(){
         vm.showNew = false;
         adService.getAds()
