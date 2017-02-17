@@ -1,8 +1,14 @@
-<!-- <div> ad </div> -->
-<div>Title: {{$ctrl.ad.title}}</div>
-<div>Description: {{$ctrl.ad.description}}<div>
-<div>Price: {{$ctrl.ad.price}}</div>
-<img src="{{$ctrl.ad.item_image}}">
+
+  <div class="col s12 offset-m1 m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{$ctrl.ad.item_image}}">
+      </div>
+
+<div class="title center">{{$ctrl.ad.title}}</div>
+<div>{{$ctrl.ad.description}}<div>
+<div>$ {{$ctrl.ad.price}}</div>
 <button ui-sref="editAdsRoute({id: $ctrl.ad.id})"> Edit </button>
 <button ng-click="$ctrl.deleteAdd()">DELETE</button>
 </br>
+  </div>

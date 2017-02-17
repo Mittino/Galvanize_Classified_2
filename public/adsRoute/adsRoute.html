@@ -14,5 +14,7 @@
 
 
 <ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
+<div class="row">
 
-<ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText | orderBy:$ctrl.sort" on-delete="$ctrl.deleteAd(id)"></ad>
+  <ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText | orderBy:$ctrl.sort" on-delete="$ctrl.deleteAd(id)"></ad>
+</div>
