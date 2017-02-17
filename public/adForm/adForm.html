@@ -1,16 +1,22 @@
 <div>
-  <form name="newAdForm" ng-submit="$ctrl.onChange({ad: $ctrl.formData});">
-    <label > Title: </label>
-    <input type="text" ng-model="$ctrl.formData.title" required></input>
-    <label> Description: </label>
-    <input type="text" ng-model="$ctrl.formData.description" required></input>
-    <br></br>
-    <label> Price: </label>
-    <input type="number" ng-model="$ctrl.formData.price" required></input>
-    <label> Image: </label>
-    <input type="text" ng-model="$ctrl.formData.item_image" required></input>
-    <br></br>
-    <button type="submit">SUBMIT</button>
-    <button>DELETE</button>
-  </form>
+  <div class="row">
+    <div class="col offset-m2 s12 m6">
+      <form name="newAdForm" ng-submit="$ctrl.onChange({ad: $ctrl.formData});">
+        <label > Title: </label>
+        <input type="text" ng-model="$ctrl.formData.title" required></input>
+        <label> Description: </label>
+        <input type="text" ng-model="$ctrl.formData.description" required></input>
+        <br></br>
+        <label> Price: </label>
+        <input type="number" ng-model="$ctrl.formData.price" required></input>
+        <label> Image: </label>
+        <input type="text" ng-model="$ctrl.formData.item_image" required></input>
+        <br></br>
+        <div class="center">
+          <button class="btn" type="submit">SUBMIT</button>
+          <button class="btn">DELETE</button>
+        <div>
+      </form>
+    </div>
+  <div>
 </div>

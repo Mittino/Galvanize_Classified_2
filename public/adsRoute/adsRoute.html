@@ -1,16 +1,28 @@
-<label> Search: <input type="search" placeholder="filter" ng-model="searchText"></label>
+<div class="row">
+  <div class="input-field col s12 m4">
+  <i class="tiny material-icons">search</i>
+  Search:
+    <div class="input-field inline">
+      <input type="search" placeholder="search" ng-model="searchText">
+  </div>
+  </div>
+  <div input-field class="input-field inline col s12 m4">
+    <a class="dropdown-button btn"></a>
+    <select name="sortBy" class="dropdown-menu" ng-model="$ctrl.sort">
+      <option value="none">None</option>
+      <option value="price">Price</option>
+      <option value="date">Date</option>
+    </select>
+    <label for="sortBy"> Sort By:</label>
+  </div>
+
+</div>
+
+
 <br></br>
-
-
-<label for="sortBy"> Sort By:</label>
-  <select name="sortBy" class="dropdown-menu" ng-model="$ctrl.sort">
-    <option value="none">None</option>
-    <option value="price">Price</option>
-    <option value="date">Date</option>
-  </select>
-
-<br></br>
-<button ng-click="$ctrl.showAdForm()"> New Ad </button>
+<div class="center">
+  <button  class="btn" ng-click="$ctrl.showAdForm()"> New Ad </button>
+</div>
 
 
 <ad-form ng-hide="!$ctrl.adForm" on-change="$ctrl.newAdd(ad)"></ad-form>
