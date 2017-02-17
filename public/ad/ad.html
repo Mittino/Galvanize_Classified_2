@@ -1,14 +1,17 @@
 
-  <div class="col s12 offset-m1 m4">
+  <div class="col s12 offset-m1 s4 m4 l4">
     <div class="card">
       <div class="card-image">
         <img src="{{$ctrl.ad.item_image}}">
       </div>
-
-<div class="title center">{{$ctrl.ad.title}}</div>
-<div>{{$ctrl.ad.description}}<div>
-<div>$ {{$ctrl.ad.price}}</div>
-<button ui-sref="editAdsRoute({id: $ctrl.ad.id})"> Edit </button>
-<button ng-click="$ctrl.deleteAdd()">DELETE</button>
-</br>
+      <div class="title center">{{$ctrl.ad.title}}</div>
+      <div class="adMargin">
+        <div>{{$ctrl.ad.description}}</div>
+        <div>$ {{$ctrl.ad.price}}</div>
+      </div>
+      <div class="center">
+        <button class="waves-effect waves-light btn" ui-sref="editAdsRoute({id: $ctrl.ad.id})">Edit</button>
+        <button class="waves-effect waves-light btn" ng-click="$ctrl.deleteAdd()">DELETE</button>
+      </div>
+    </div>
   </div>
