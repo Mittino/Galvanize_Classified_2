@@ -1,14 +1,15 @@
+
 <div class="row">
-  <div class="input-field col s12 m4">
+  <div class="input-field col offset-m2 s12 m4">
   <i class="tiny material-icons">search</i>
   Search:
     <div class="input-field inline">
       <input type="search" placeholder="search" ng-model="searchText">
   </div>
   </div>
-  <div input-field class="input-field inline col s12 m4">
-    <a class="dropdown-button btn"></a>
-    <select name="sortBy" class="dropdown-menu" ng-model="$ctrl.sort">
+
+  <div input-field class="input-field col s12 m4">
+    <select name="sortBy" ng-model="$ctrl.sort" material-select watch>
       <option value="none">None</option>
       <option value="price">Price</option>
       <option value="date">Date</option>
@@ -17,7 +18,6 @@
   </div>
 
 </div>
-
 
 <br></br>
 <div class="center">
@@ -29,4 +29,3 @@
 <div class="row">
 
   <ad ad="ad" ng-repeat="ad in $ctrl.ads | filter:searchText | orderBy:$ctrl.sort" on-delete="$ctrl.deleteAd(id)"></ad>
-</div>
