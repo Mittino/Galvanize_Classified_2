@@ -16,3 +16,6 @@
   background-color:white;
   font: white;
 }
+.card{
+  max-width: 300px;
+}
